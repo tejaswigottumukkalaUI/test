@@ -1,0 +1,11 @@
+<div ng-controller="BirthdayInputController as ctrl">
+<md-content>
+    <md-input-container>
+        <label>Name</label>
+        <input ng-model="ctrl.userName" type="text" ng-init="ctrl.userName = null">
+    </md-input-container>
+         <md-datepicker ng-model="ctrl.date" md-placeholder="Enter date" ng-init="ctrl.date=null"></md-datepicker>
+</md-content>
+<md-button class="md-raised" ng-disabled="!(ctrl.userName && ctrl.date)" ng-click="ctrl.add()">Add</md-button>
+<md-button class="md-raised" ui-sref="calendar">View Calendar</md-button>
+</div>

@@ -1,0 +1,16 @@
+<div ng-controller="CalendarController as ctrl">
+
+        <md-radio-group ng-model="ctrl.sortBy"  ng-change="ctrl.updateSort()" flex layout="row">
+      <md-radio-button value="chron" class="md-primary">Chronologically</md-radio-button>
+      <md-radio-button value="num"> Number of Birthdays </md-radio-button>
+    </md-radio-group>
+
+    <div ng-repeat="obj in ctrl.months">
+        <month-component month='{{obj.number}}' name='{{obj.name}}'></month-component>
+    </div>
+
+    
+
+
+    <md-button class="md-raised" ui-sref="input">Back to Input Page</md-button>
+</div>
